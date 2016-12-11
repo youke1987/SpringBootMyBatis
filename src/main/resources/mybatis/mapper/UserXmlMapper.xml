@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="cn.apopo.mybatis.mapper.UserXmlMapper" >
+
+    <resultMap id="BaseResultMap" type="cn.apopo.mybatis.entity.UserEntity" >
+        <id column="id" property="id" />
+        <result column="username" property="userName" />
+        <result column="phone" property="phone" />
+    </resultMap>
+
+    <sql id="Base_Column_List" >
+        id, username, phone
+    </sql>
+
+    <select id="getAll" resultMap="BaseResultMap"  >
+        SELECT
+        <include refid="Base_Column_List" />
+        FROM user
+    </select>
+
+    <select id="getOne" parameterType="java.lang.Long" resultMap="BaseResultMap" >
+        SELECT
+        <include refid="Base_Column_List" />
+        FROM user
+        WHERE id = #{id}
+    </select>
+
+    <insert id="insert" parameterType="UserEntity" >
+        INSERT INTO
+        user
+        (username, phone)
+        VALUES
+        (#{userName}, #{phone})
+    </insert>
+
+    <update id="update" parameterType="UserEntity" >
+        UPDATE
+        user
+        SET
+        <if test="userName != null">username = #{userName},</if>
+        <if test="phone != null">phone = #{phone},</if>
+        WHERE
+        id = #{id}
+    </update>
+
+    <delete id="delete" parameterType="java.lang.Long" >
+        DELETE FROM
+        user
+        WHERE
+        id = #{id}
+    </delete>
+</mapper>
