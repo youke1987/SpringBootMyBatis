@@ -1,7 +1,7 @@
 /*
- * Copyright (C) 2016 Baidu, Inc. All Rights Reserved.
+ * Copyright (C) 2017 Baidu, Inc. All Rights Reserved.
  */
-package cn.apopo.mybatis.web;
+package cn.apopo.springboot.mybatis.web;
 
 import java.util.List;
 
@@ -9,9 +9,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import cn.apopo.mybatis.entity.UserEntity;
-import cn.apopo.mybatis.mapper.UserMapper;
-import cn.apopo.mybatis.mapper.UserXmlMapper;
+import cn.apopo.springboot.mybatis.entity.UserEntity;
+import cn.apopo.springboot.mybatis.mapper.UserMapper;
+import cn.apopo.springboot.mybatis.mapper.UserXmlMapper;
 
 /**
  * Created by qiaoshuang on 2016/12/11.

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 
-<mapper namespace="cn.apopo.mybatis.mapper.UserXmlMapper" >
+<mapper namespace="cn.apopo.springboot.mybatis.mapper.UserXmlMapper" >
 
-    <resultMap id="BaseResultMap" type="cn.apopo.mybatis.entity.UserEntity" >
+    <resultMap id="BaseResultMap" type="cn.apopo.springboot.mybatis.entity.UserEntity" >
         <id column="id" property="id" />
         <result column="username" property="userName" />
         <result column="phone" property="phone" />

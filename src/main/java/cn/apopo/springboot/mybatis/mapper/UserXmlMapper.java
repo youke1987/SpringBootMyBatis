@@ -1,12 +1,12 @@
 /*
- * Copyright (C) 2016 Baidu, Inc. All Rights Reserved.
+ * Copyright (C) 2017 Baidu, Inc. All Rights Reserved.
  */
-package cn.apopo.mybatis.mapper;
+package cn.apopo.springboot.mybatis.mapper;
 
 import java.util.List;
 
 
-import cn.apopo.mybatis.entity.UserEntity;
+import cn.apopo.springboot.mybatis.entity.UserEntity;
 
 /**
  * Created by qiaoshuang on 2016/12/11.
